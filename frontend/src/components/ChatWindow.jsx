@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, FileText, Sparkles, Loader } from 'lucide-react';
 
-const API = '/api';
+const API = import.meta.env.VITE_BACKEND_URL 
+  ? `${import.meta.env.VITE_BACKEND_URL}/api` 
+  : '/api';
 
 const SUGGESTIONS = [
   "How many vacation days do I get?",

@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { FileText, Upload, Trash2, Database, X, CheckCircle, Loader } from 'lucide-react';
 
-const API = '/api';
+const API = import.meta.env.VITE_BACKEND_URL 
+  ? `${import.meta.env.VITE_BACKEND_URL}/api` 
+  : '/api';
 
 const CATEGORY_COLORS = {
   'Human Resources': '#a78bfa',
